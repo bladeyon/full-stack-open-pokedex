@@ -1,0 +1,29 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  # 自定义模式失败
+  # - name: pokedex
+  #   src: ./
+  #   engine: custom
+  #   commands:
+  #     - npm run build
+
+  # push 后访问没有匹配到目录 ENOENT: no such file or directory, stat '/var/task/index.html'
+  # - name: full-stack-open-pokedex
+  #   src: ./
+  #   engine: react
+  #   primary: true
+  #   commands:
+  #     - npm run build
+
+  # 以静态网站的形式发布
+  # - name: deploy-build-package
+  #   src: ./
+  #   engine: static
+  #   serve: dist
+  #   commands:
+  #     - npm run build
+
+  - name: deploy-build-package
+    src: .
+    engine: react
